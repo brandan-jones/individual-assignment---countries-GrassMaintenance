@@ -11,11 +11,8 @@ import app.plantdiary.individualassignment304832.dto.Country
 import app.plantdiary.individualassignment304832.service.CountryService
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
-import io.mockk.coVerify
-import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.newSingleThreadContext
 import kotlinx.coroutines.test.resetMain
@@ -69,8 +66,8 @@ class CountryUnitTest {
     @Test
     fun `given a country dto when code is NZ and name is New Zealand then code is NZ and name is New Zealand`() {
         var country = Country("NZ", "New Zealand")
-        assertTrue(country.code.equals("NZ") )
-        assertTrue(country.name.equals("New Zealand"))
+        assertTrue(country.Code.equals("NZ") )
+        assertTrue(country.Name.equals("New Zealand"))
     }
 
     @Test
